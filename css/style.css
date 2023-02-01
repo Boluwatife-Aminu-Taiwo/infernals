@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+
+body {
+  background-color: #140d04;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* navbar */
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: 20px auto 0;
+  padding: 10px 10px;
+}
+.text:hover {
+  cursor: pointer;
+  background-color: #d17206;
+}
+
+.text:active {
+  top: 5px;
+  box-shadow: -4px 2px 1px 1px grey, -4px -2px 1px 1px lightgray,
+    4px 0px 1px 1px lightgray;
+}
+
+.text::after {
+  content: "";
+  background: black;
+  position: absolute;
+  left: -2.5%;
+  top: 0;
+  width: 105%;
+  height: 100%;
+  z-index: -1;
+}
+
+.text::before {
+  content: "";
+  background: black;
+  position: absolute;
+  left: 0;
+  top: -5%;
+  width: 100%;
+  height: 113%;
+  z-index: -1;
+}
+.text {
+  font-size: 1.2em;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  margin: auto;
+  padding: 10px 20px;
+  top: 0;
+  background: #e2720a;
+  border: 0px;
+  position: relative;
+  box-shadow: inset -4px 2px 1px 1px grey, inset -4px -2px 1px 1px lightgray,
+    inset 4px 0px 1px 1px lightgray;
+}
+
+.info img {
+  width: 50px;
+}
+
+/* cave */
+
+.cave {
+  position: relative;
+  height: 70vh;
+  margin: 0 20px;
+}
+
+.pillar,
+.treasure {
+  position: absolute;
+}
+
+.pillar {
+  height: 100%;
+}
+
+.pillar-right {
+  right: 0;
+  top: 10vh;
+}
+.pillar-left {
+  left: 0;
+  top: 10vh;
+}
+.treasure {
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  z-index: 1;
+}
+
+/* media query */
+@media (max-width: 567px) {
+  .container {
+    width: 100%;
+  }
+  .text {
+    display: none;
+  }
+  .text::after {
+    display: none;
+  }
+  .text::before {
+    display: none;
+  }
+  .pillar {
+    display: none;
+  }
+  #navbar {
+    width: 100%;
+    margin: 0;
+    padding: 10px 10px;
+  }
+  .logo img {
+    width: 50px;
+  }
+}
+@media (max-width: 876px) {
+  .container {
+    width: 100%;
+  }
+  .pillar {
+    display: none;
+  }
+}
